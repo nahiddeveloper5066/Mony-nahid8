@@ -1,300 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ads on Monetage mini app </title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .container {
-            text-align: center;
-            background: #1f1f1f;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            width: 300px;
-        }
-        
-        .container h1 {
-            font-size: 20px;
-            color: green;
-            margin-bottom: 10px;
-        }
-        
-        .developer {
-            font-size: 12px;
-            background-color: green;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            display: inline-block;
-            cursor: pointer;
-        }
-        
-        .stats {
-            margin: 10px 0;
-        }
-        
-        .stats p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        
-        .progress-circle {
-            width: 80px;
-            height: 80px;
-            border: 4px solid green;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px auto;
-        }
-        
-        .progress-circle span {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .buttons button {
-            width: 90%;
-            margin: 5px 0;
-            padding: 10px;
-            font-size: 14px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            background: green;
-            cursor: pointer;
-        }
-        
-        .buttons button:hover {
-            background: darkorange;
-        }
-        
-        .withdraw-section {
-            margin-top: 20px;
-            display: none;
-            padding: 20px;
-            background-color: #2a2a2a;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        
-        .withdraw-section input, .withdraw-section select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 2px solid #555;
-            background-color: #333;
-            color: #fff;
-        }
-        
-        .withdraw-section input:focus, .withdraw-section select:focus {
-            border-color: green;
-            outline: none;
-        }
-        
-        .withdraw-section button {
-            background-color: green;
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            margin-top: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        .withdraw-section button:hover {
-            background-color: #006400;
-        }
-        
-        #withdraw-status {
-            color: red;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        
-        .user-info {
-            margin: 10px 0;
-        }
-        
-        .user-info p {
-            font-size: 14px;
-            margin: 5px 0;
-        }
-    </style>
-    <link rel="me" href="https://www.blogger.com/profile/12615525391666988711" />
-    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
-    <link rel="me" href="https://www.blogger.com/profile/10983280640489625734" />
-    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-    <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎁  এডস দেখে ইনকাম করুন</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #3d3d3d);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 20px auto;
+      background: #292929;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff5252, #ff9a52, #ffd452, #52ff5e, #529aff, #d452ff);
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #ffd452;
+      text-shadow: 0 0 10px rgba(255, 212, 82, 0.3);
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    
+    .stat-box {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    .stat-title {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 5px;
+    }
+    
+    .stat-value {
+      font-size: 22px;
+      font-weight: bold;
+      color: #52ff5e;
+    }
+    
+    .progress-container {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 5px;
+      margin: 15px 0;
+    }
+    
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    .progress-bar {
+      height: 15px;
+      background: #444;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff5252, #ffd452);
+      border-radius: 10px;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+    
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    
+    button {
+      background: linear-gradient(135deg, #ff5252, #ff9a52);
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(255, 82, 82, 0.3);
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(255, 82, 82, 0.4);
+    }
+    
+    button:active {
+      transform: translateY(1px);
+    }
+    
+    .withdraw-btn {
+      background: linear-gradient(135deg, #52ff5e, #529aff);
+      margin-top: 20px;
+      padding: 16px;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(82, 255, 94, 0.3);
+    }
+    
+    .withdraw-btn:hover {
+      box-shadow: 0 6px 12px rgba(82, 255, 94, 0.4);
+    }
+    
+    .referral-container {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 15px;
+      margin: 25px 0 15px;
+      text-align: left;
+    }
+    
+    .referral-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #529aff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .referral-content {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .referral-code {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-align: center;
+      border: 1px dashed #529aff;
+    }
+    
+    .copy-btn {
+      background: #529aff;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .copy-btn:hover {
+      background: #3a7bff;
+    }
+    
+    .referral-note {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 30px rgba(255, 212, 82, 0.3);
+      position: relative;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ff5252;
+    }
+    
+    .modal-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffd452;
+    }
+    
+    .modal-input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 2px solid #444;
+      background: #333;
+      color: white;
+      font-size: 16px;
+    }
+    
+    .modal-input:focus {
+      outline: none;
+      border-color: #529aff;
+    }
+    
+    .modal-btn {
+      background: linear-gradient(135deg, #52ff5e, #529aff);
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      margin: 10px 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .payment-option:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .payment-option.selected {
+      background: rgba(82, 255, 94, 0.1);
+      border: 1px solid #52ff5e;
+    }
+    
+    .payment-logo {
+      width: 40px;
+      height: 40px;
+      background: #444;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+    
+    .bkash { background: linear-gradient(135deg, #e2136e, #a10c4d); }
+    .nagad { background: linear-gradient(135deg, #22a6b3, #1a7e88); }
+    
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    
+    .notification {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(82, 255, 94, 0.9);
+      color: #111;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      z-index: 1000;
+      display: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .stats-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .referral-content {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Earing Technology </h1>
-        <div class="developer" onclick="window.location.href='https://t.me/Bossmaster100'">Developer by Md Srabon Ahmed </div>
-        
-        <!-- Display User Info -->
-        <div class="user-info">
-            <p>Welcome, <span id="user-name"></span></p>
-        </div>
-        
-        <div class="stats">
-            <p>Watched Ads: <span id="watched-ads">0</span></p>
-            <p>Earned Points: <span id="earned-points">0</span></p>
-        </div>
-        
-        <div class="progress-circle">
-            <span id="ads-progress">0%</span>
-        </div>
-        
-        <div class="buttons">
-            <button id="watch-ad-btn" onclick="watchAd()">Watch Ad</button>
-            <button id="auto-ad-btn" onclick="startAutoAds()">Auto Show Ads</button>
-            <button id="stop-auto-btn" onclick="stopAutoAds()">Stop Auto Ads</button>
-            <button id="withdraw-btn" onclick="showWithdrawForm()">Withdraw</button>
-        </div>
-        
-        <!-- Withdraw Section -->
-        <div class="withdraw-section" id="withdraw-section">
-            <h3 style="color: orange; margin-bottom: 15px;">Withdrawal Request</h3>
-            <input type="number" id="withdraw-amount" placeholder="Enter Points to Withdraw" />
-            <select id="payment-method">
-                <option value="bkash">Bkash</option>
-                <option value="nagad">Nagad</option>
-                <option value="manual">Manual</option>
-            </select>
-            <input type="text" id="withdraw-phone" placeholder="Enter Phone Number" />
-            <button onclick="withdrawPoints()">Withdraw</button>
-            <p id="withdraw-status"></p>
-        </div>
+  <div class="container">
+    <h1>🎁 ঘরে বসে এডস দেখে ইনকাম করুন</h1>
+    <p class="subtitle">Watch ads, refer friends, and withdraw your earnings!</p>
+    
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-title">Total Earnings</div>
+        <div class="stat-value">৳<span id="balance">0</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Ads Watched</div>
+        <div class="stat-value"><span id="ads-count">0</span>/50</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Referrals</div>
+        <div class="stat-value"><span id="referral-count">0</span></div>
+      </div>
     </div>
+    
+    <div class="progress-container">
+      <div class="progress-label">
+        <span>Next Reward: ৳10 at 50 ads</span>
+        <span><span id="progress-percent">0</span>%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    
+    <div class="btn-group">
+      <button onclick="showAd()">🎁 Claim Now</button>
+      <button onclick="showAd()">🔥 Hot Offer</button>
+      <button onclick="showAd()">🎉 Surprise Gift</button>
+      <button onclick="showAd()">🤑 Win Cash</button>
+      <button onclick="showAd()">💎 Unlock Bonus</button>
+    </div>
+    
+    <button class="withdraw-btn" onclick="openWithdrawModal()">💸 Withdraw via bKash/Nagad</button>
+    
+    <div class="referral-container">
+      <div class="referral-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        Refer Friends & Earn ৳1 Each
+      </div>
+      <div class="referral-content">
+        <div class="referral-code" id="referral-code">@razzak45_bot</div>
+        <button class="copy-btn" onclick="copyReferralCode()">Copy</button>
+      </div>
+      <div class="referral-note">Share your code with friends. When they sign up using your code, you get ৳1!</div>
+    </div>
+    
+    <div class="footer">Powered by It'z Nahid| Telegram Mini App</div>
+  </div>
+  
+  <!-- Withdraw Modal -->
+  <div class="modal" id="withdraw-modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Withdraw Earnings</h2>
+      
+      <div class="payment-option" onclick="selectPayment('bkash')" id="bkash-option">
+        <div class="payment-logo bkash">bK</div>
+        <div>
+          <div><strong>bKash</strong></div>
+          <div>Instant withdrawal to bKash wallet</div>
+        </div>
+      </div>
+      
+      <div class="payment-option" onclick="selectPayment('nagad')" id="nagad-option">
+        <div class="payment-logo nagad">NG</div>
+        <div>
+          <div><strong>Nagad</strong></div>
+          <div>Instant withdrawal to Nagad wallet</div>
+        </div>
+      </div>
+      
+      <input type="tel" class="modal-input" id="mobile-number" placeholder="Enter mobile number" maxlength="11">
+      <input type="number" class="modal-input" id="amount" placeholder="Enter amount (৳)" min="10" max="1000">
+      
+      <button class="modal-btn" onclick="processWithdrawal()">Confirm Withdrawal</button>
+    </div>
+  </div>
+  
+  <!-- Notification -->
+  <div class="notification" id="notification"></div>
+  
+  <!-- Monetag Ad Script -->
+  <script src='//libtl.com/sdk.js' data-zone='9450035' data-sdk='show_9450035'></script>
 
-    <script src='//libtl.com/sdk.js' data-zone='9441909' data-sdk='show_9441909'></script>
-    <script>
-        const MIN_WITHDRAW_POINTS = 5;
-        const ADMIN_USER_ID = 8194817696;
-        const BOT_TOKEN = "8194817696:AAFFNXVtK0_K733JwNWhA08hAbfigci6ZEY";
+  <script>
+    // User state
+    let userState = {
+      balance: 0,
+      adsWatched: 0,
+      referrals: 0,
+      referralCode: 'EARN-' + Math.random().toString(36).substr(2, 4).toUpperCase()
+    };
+    
+    // Selected payment method
+    let selectedPayment = null;
+    
+    // Initialize the app
+    function init() {
+      // Load state from localStorage if available
+      const savedState = localStorage.getItem('giftAppState');
+      if (savedState) {
+        userState = JSON.parse(savedState);
+      } else {
+        saveState();
+      }
+      
+      updateUI();
+    }
+    
+    // Save state to localStorage
+    function saveState() {
+      localStorage.setItem('giftAppState', JSON.stringify(userState));
+    }
+    
+    // Update UI with current state
+    function updateUI() {
+      document.getElementById('balance').textContent = userState.balance.toFixed(2);
+      document.getElementById('ads-count').textContent = userState.adsWatched;
+      document.getElementById('referral-count').textContent = userState.referrals;
+      document.getElementById('referral-code').textContent = userState.referralCode;
+      
+      // Update progress bar
+      const progressPercent = Math.min(100, (userState.adsWatched / 50) * 100);
+      document.getElementById('progress-fill').style.width = progressPercent + '%';
+      document.getElementById('progress-percent').textContent = Math.round(progressPercent);
+    }
+    
+    // Show ad function
+    function showAd() {
+      if (typeof show_9450035 === 'function') {
+        show_9450035(); // Trigger Monetag ad
         
-        let watchedAdsCount = 0;
-        let earnedPoints = 0.00;
-        let autoAdInterval;
+        // After ad is shown, update state
+        setTimeout(() => {
+          userState.adsWatched++;
+          
+          // Reward ৳10 for every 50 ads
+          if (userState.adsWatched % 50 === 0) {
+            userState.balance += 10;
+            showNotification("🎉 Congratulations! You earned ৳10 for watching 50 ads!");
+          }
+          
+          saveState();
+          updateUI();
+        }, 1000);
+      } else {
+        // Simulate ad watching in development
+        userState.adsWatched++;
         
-        // Simulate user name from Telegram User ID (replace with actual logic to get user info)
-        const telegramUserName = "@exampleUser"; // Replace with actual logic to fetch username
-        document.getElementById("user-name").textContent = telegramUserName;
-        
-        // Check if user data is saved in localStorage
-        if (localStorage.getItem('watchedAdsCount')) {
-            watchedAdsCount = parseInt(localStorage.getItem('watchedAdsCount'));
-            earnedPoints = parseFloat(localStorage.getItem('earnedPoints'));
-            document.getElementById('watched-ads').textContent = watchedAdsCount;
-            document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
+        // Reward ৳10 for every 50 ads
+        if (userState.adsWatched % 50 === 0) {
+          userState.balance += 10;
+          showNotification("🎉 Congratulations! You earned ৳10 for watching 50 ads!");
         }
         
-        // Function to watch an ad and update stats
-        function watchAd() {
-            if (typeof show_9441909 === 'function') {
-                show_9441909().then(() => {
-                    // When the ad is shown, we add points
-                    watchedAdsCount++;
-                    document.getElementById('watched-ads').textContent = watchedAdsCount;
-                    earnedPoints += 0.50; // Add 0.50 points per ad watched
-                    document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
-                    localStorage.setItem('watchedAdsCount', watchedAdsCount);
-                    localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
-                    
-                    // Update progress circle
-                    updateProgressCircle();
-                });
-            }
-        }
-        
-        // Update progress circle based on watched ads
-        function updateProgressCircle() {
-            const percentage = (watchedAdsCount / 10) * 100;
-            document.getElementById('ads-progress').textContent = `${percentage}%`;
-        }
-        
-        // Function to start auto showing ads
-        function startAutoAds() {
-            autoAdInterval = setInterval(watchAd, 5000); // Auto show ad every 5 seconds
-            document.getElementById('auto-ad-btn').disabled = true;
-            document.getElementById('stop-auto-btn').disabled = false;
-        }
-        
-        // Function to stop auto ads
-        function stopAutoAds() {
-            clearInterval(autoAdInterval);
-            document.getElementById('auto-ad-btn').disabled = false;
-            document.getElementById('stop-auto-btn').disabled = true;
-        }
-        
-        // Function to show withdraw form
-        function showWithdrawForm() {
-            document.getElementById('withdraw-section').style.display = 'block';
-        }
-        
-        // Function to handle withdrawal
-        function withdrawPoints() {
-            const amount = document.getElementById('withdraw-amount').value;
-            const paymentMethod = document.getElementById('payment-method').value;
-            const phoneNumber = document.getElementById('withdraw-phone').value;
-            
-            if (amount < MIN_WITHDRAW_POINTS) {
-                document.getElementById('withdraw-status').textContent = `Minimum withdrawal amount is ${MIN_WITHDRAW_POINTS} points.`;
-                return;
-            }
-            
-            if (amount > earnedPoints) {
-                document.getElementById('withdraw-status').textContent = `Insufficient balance. You have ${earnedPoints.toFixed(2)} points.`;
-                return;
-            }
-            
-            // Subtract points from earnedPoints after successful withdrawal
-            earnedPoints -= parseFloat(amount);
-            document.getElementById('earned-points').textContent = earnedPoints.toFixed(2);
-            
-            // Save the updated balance in localStorage
-            localStorage.setItem('earnedPoints', earnedPoints.toFixed(2));
-            
-            // Send withdrawal request to admin via Telegram
-            const message = `Withdrawal Request from ${telegramUserName}:\nAmount: ${amount} points\nPayment Method: ${paymentMethod}\nPhone Number: ${phoneNumber}`;
-            sendWithdrawRequestToAdmin(message);
-            
-            // Show success message
-            document.getElementById('withdraw-status').textContent = 'Withdrawal request sent successfully!';
-            
-            // Clear form
-            document.getElementById('withdraw-amount').value = '';
-            document.getElementById('withdraw-phone').value = '';
-        }
-        
-        // Function to send withdrawal request to admin
-        function sendWithdrawRequestToAdmin(message) {
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${ADMIN_USER_ID}&text=${encodeURIComponent(message)}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.ok) {
-                        console.log('Message sent to admin');
-                    }
-                })
-                .catch(error => console.error('Error sending message:', error));
-        }
-    </script>
+        saveState();
+        updateUI();
+        showNotification("Ad watched successfully! Keep going to earn more!");
+      }
+    }
+    
+    // Copy referral code
+    function copyReferralCode() {
+      const code = userState.referralCode;
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          showNotification("Referral code copied to clipboard! Share it with friends.");
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+          showNotification("Failed to copy code. Please try again.");
+        });
+    }
+    
+    // Open withdraw modal
+    function openWithdrawModal() {
+      if (userState.balance < 10) {
+        showNotification("You need at least ৳10 to withdraw. Watch more ads!");
+        return;
+      }
+      
+      document.getElementById('withdraw-modal').style.display = 'flex';
+      document.getElementById('amount').value = userState.balance.toFixed(2);
+    }
+    
+    // Close modal
+    function closeModal() {
+      document.getElementById('withdraw-modal').style.display = 'none';
+      selectedPayment = null;
+      document.getElementById('bkash-option').classList.remove('selected');
+      document.getElementById('nagad-option').classList.remove('selected');
+    }
+    
+    // Select payment method
+    function selectPayment(method) {
+      selectedPayment = method;
+      
+      // Update UI
+      document.getElementById('bkash-option').classList.remove('selected');
+      document.getElementById('nagad-option').classList.remove('selected');
+      
+      if (method === 'bkash') {
+        document.getElementById('bkash-option').classList.add('selected');
+      } else if (method === 'nagad') {
+        document.getElementById('nagad-option').classList.add('selected');
+      }
+    }
+    
+    // Process withdrawal
+    function processWithdrawal() {
+      const mobileNumber = document.getElementById('mobile-number').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+      
+      // Validation
+      if (!selectedPayment) {
+        showNotification("Please select a payment method");
+        return;
+      }
+      
+      if (!mobileNumber || mobileNumber.length !== 11 || !mobileNumber.startsWith('01')) {
+        showNotification("Please enter a valid Bangladeshi mobile number");
+        return;
+      }
+      
+      if (isNaN(amount) || amount < 10 || amount > userState.balance) {
+        showNotification("Invalid amount. Minimum is ৳10 and maximum is your balance");
+        return;
+      }
+      
+      // Process withdrawal (simulated)
+      userState.balance -= amount;
+      saveState();
+      updateUI();
+      
+      // Show success message
+      const methodName = selectedPayment === 'bkash' ? 'bKash' : 'Nagad';
+      showNotification(`৳${amount.toFixed(2)} withdrawal to ${methodName} (${mobileNumber}) initiated!`);
+      
+      // Close modal
+      closeModal();
+    }
+    
+    // Show notification
+    function showNotification(message) {
+      const notification = document.getElementById('notification');
+      notification.textContent = message;
+      notification.style.display = 'block';
+      
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 3000);
+    }
+    
+    // Initialize the app when page loads
+    window.onload = init;
+  </script>
 </body>
-</html>
+    </html>
